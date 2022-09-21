@@ -10,7 +10,7 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/bin/Debug/net5.0/customerservice.dll",
+            "program": "${workspaceFolder}/customerservice/bin/Debug/net6.0/customerservice.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
             "stopAtEntry": false,
@@ -20,7 +20,9 @@
                 "pattern": "\\\\bNow listening on:\\\\s+(https?://\\\\S+)"
             },
             "env": {
-                "ASPNETCORE_ENVIRONMENT": "Development"
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "ASPNETCORE_URLS":"http://localhost:5040",
+                "DOTNET_ConnectionStrings__NorthwindContext":"Server=mymssql-mssql-linux.incomm-poc;Database=Northwind;User Id=sa;Password=2t2kpvAinnNnvOafb5g6;MultipleActiveResultSets=true"
             },
             "sourceFileMap": {
                 "/Views": "${workspaceFolder}/Views"
